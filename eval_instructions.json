@@ -1,0 +1,38 @@
+{
+  "original_repo": "https://github.com/Niranjan150208/LANDSAFE_AI",
+  "language_composition": [
+    {"name":"HTML","percent":71.5},
+    {"name":"JavaScript","percent":28.4},
+    {"name":"Other","percent":0.1}
+  ],
+  "scoring_weights": {
+    "functionality": 0.25,
+    "innovation": 0.20,
+    "technical_implementation": 0.20,
+    "ui_ux": 0.15,
+    "feasibility": 0.10,
+    "demo": 0.10
+  },
+  "required_output_schema": {
+    "type": "object",
+    "properties": {
+      "scores": {
+        "type": "object",
+        "properties": {
+          "functionality": {"type":"number"},
+          "innovation": {"type":"number"},
+          "technical_implementation": {"type":"number"},
+          "ui_ux": {"type":"number"},
+          "feasibility": {"type":"number"},
+          "demo": {"type":"number"}
+        }
+      },
+      "weighted_total": {"type":"number"},
+      "breakdown": {"type":"object"},
+      "evidence": {"type":"array"},
+      "suggestions": {"type":"array"}
+    },
+    "required": ["scores","weighted_total","breakdown","evidence","suggestions"]
+  },
+  "notes": "Each category score should be 0-100. Weighted total is the sum of category_score * weight. Evidence entries should reference specific files/paths whenever possible."
+}
